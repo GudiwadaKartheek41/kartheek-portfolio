@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kartheek | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons (optional but recommended) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <nav>
+      <a href="#home"><span>Home</span></a>
+      <a href="#about"><span>About</span></a>
+      <a href="#education"><span>Education</span></a>
+      <a href="#experience"><span>Experience</span></a>
+      <a href="#projects"><span>Projects</span></a>
+      <a href="#skills"><span>Skills</span></a>
+      <a href="#achievements"><span>Achievements</span></a>
+      <a href="#contact"><span>Contact</span></a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content">
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <!-- HOME -->
+    <section id="home" class="section home">
+      <div class="home-text">
+        <h1>Gudiwada Kartheek</h1>
+        <p class="role">Mechanical Engineering Undergraduate</p>
+
+        <div class="home-affiliation">
+          <img src="images/IIT_(ISM)_Dhanbad_Logo.svg" alt="IIT ISM Dhanbad Logo">
+          <p class="tagline">IIT ISM Dhanbad • Aerospace • Control Systems</p>
+        </div>
+
+        <p class="intro">
+          Passionate Mechanical Engineering undergraduate with a strong interest in aerospace systems, control engineering, and applied research.
+          Focused on building a solid foundation through hands-on projects and continuous learning.
+        </p>
+      </div>
+
+      <div class="home-image">
+        <img src="images/portfolio_pic.jpg" alt="Profile Image">
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2>About Me</h2>
+
+      <p>
+        I am a Mechanical Engineering undergraduate at IIT (ISM) Dhanbad with strong research exposure in aerospace systems, control engineering,
+        and computational modeling. I have worked on reduced-order modeling, digital twin development, and quadrotor control through research
+        internships at IIT Madras and DRDO.
+      </p>
+
+      <p>
+        My academic interests focus on applying advanced modeling, simulation, and control techniques to complex engineering systems.
+        I am particularly interested in research-driven problem solving and the development of scalable, physics-based models
+        for real-world applications.
+      </p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <h2>Education</h2>
+
+      <div class="education-timeline">
+
+        <div class="edu-card">
+          <span class="edu-year">2022 – 2026</span>
+          <h3>Indian Institute of Technology (ISM), Dhanbad</h3>
+          <p class="edu-degree">Bachelor of Technology in Mechanical Engineering</p>
+          <p class="edu-score">CGPA: <strong>8.55 / 10.00</strong></p>
+        </div>
+
+        <div class="edu-card">
+          <span class="edu-year">2020 – 2022</span>
+          <h3>Sri Chaitanya Junior College, Vijayawada</h3>
+          <p class="edu-degree">Intermediate</p>
+          <p class="edu-score">Marks: <strong>967/ 1000</strong></p>
+        </div>
+
+        <div class="edu-card">
+          <span class="edu-year">2019 – 2020</span>
+          <h3>Sri Chaitanya High School, Tenali</h3>
+          <p class="edu-degree">Secondary School Certificate</p>
+          <p class="edu-score">Marks: <strong>597 / 600</strong></p>
+        </div>
+
+      </div>
+    </section>
+    <!-- EXPERIENCE -->
+<section id="experience" class="section experience">
+
+  <h2>Experience</h2>
+
+  <!-- Experience Row 1 -->
+  <div class="exp-row">
+    <div class="exp-content">
+      <span class="exp-role">Research Intern</span>
+      <h3>IIT Madras</h3>
+      <p class="exp-domain">
+        Digital Twins • Reduced-Order Modeling • Aerospace Systems
+      </p>
+
+      <p class="exp-desc">
+       Conducted research on reduced-order modeling and digital twin development
+  for aerospace systems, with the objective of enabling computationally
+  efficient simulations for large-scale, high-fidelity models. Developed
+  physics-based frameworks to analyze system behavior, supported model
+  validation studies, and assisted in performance evaluation through
+  simulation-driven analysis at the system level.
+      </p>
+    </div>
+
+    <div class="exp-visual">
+      <img src="images/img1.png" alt="Digital Twin Visualization">
+    </div>
+  </div>
+
+  <!-- Experience Row 2 -->
+  <div class="exp-row reverse">
+    <div class="exp-content">
+      <span class="exp-role">Research Intern</span>
+      <h3>DRDO</h3>
+      <p class="exp-domain">
+        Control Systems • Quadrotor Dynamics • Defense Research
+      </p>
+
+      <p class="exp-desc">
+        Worked on the modeling and analysis of quadrotor dynamics with a focus on
+  control-oriented system representation. Contributed to stability analysis
+  and controller design studies, applying classical and modern control
+  concepts to aerial platforms relevant to defense applications. The work
+  emphasized robustness, system response evaluation, and control feasibility
+  under practical operating conditions.
+      </p>
+    </div>
+
+    <div class="exp-visual">
+      <img src="images/img3.png" alt="Defense Aerospace Research">
+    </div>
+  </div>
+
+</section>
+<!-- PROJECTS -->
+<section id="projects" class="section projects">
+
+  <h2>Projects</h2>
+
+  <!-- Project 01 -->
+  <div class="project-dossier featured">
+
+    <div class="project-id">
+      <span class="pid">01</span>
+      <span class="pcontext">Inter IIT Tech Meet 13.0<br>ideaForge</span>
+    </div>
+
+    <div class="project-main">
+      <h3>Position and Altitude Control of Quadrotor with Single Motor Failure</h3>
+
+      <p class="project-desc">
+        Addressed a high-complexity fault-tolerant control problem involving quadrotor flight under
+        single motor failure conditions. Developed an implicit fault detection strategy without
+        explicit failure signaling and implemented Incremental Nonlinear Dynamic Inversion (INDI)
+        control to ensure stable attitude and altitude regulation.
+      </p>
+
+      <p class="project-desc">
+        The control architecture was validated through simulation-based studies focusing on robustness,
+        fault recovery, and closed-loop performance under actuator loss scenarios.
+      </p>
+
+      <a href="https://indianinstituteoftechnol299-my.sharepoint.com/personal/22je0367_iitism_ac_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F22je0367%5Fiitism%5Fac%5Fin%2FDocuments%2FideaForge%5FHigh%5FPS&ga=1" target="_blank" class="project-link">
+        View Technical Documentation & Simulation Results →
+      </a>
+    </div>
+
+    <div class="project-stack">
+      <span>PX4 Autopilot</span>
+      <span>ROS2</span>
+      <span>MATLAB / Simulink</span>
+      <span>Control Systems</span>
+    </div>
+
+  </div>
+
+  <!-- Project 02 -->
+  <div class="project-dossier">
+
+    <div class="project-id">
+      <span class="pid">02</span>
+      <span class="pcontext">Research Study</span>
+    </div>
+
+    <div class="project-main">
+      <h3>Structural Analysis of Lattice Structures for LPBF Parts</h3>
+
+      <p class="project-desc">
+        Conducted an in-depth study on lattice structures used in additive manufacturing, focusing on
+        lattice topologies, design principles, and mechanical performance characteristics relevant to
+        LPBF processes.
+      </p>
+
+      <p class="project-desc">
+        Performed structural simulations using nTop to evaluate stiffness, stress distribution, and
+        deformation behavior across multiple lattice architectures, with scope for future experimental
+        validation.
+      </p>
+    </div>
+
+    <div class="project-stack">
+      <span>nTop</span>
+      <span>Structural Analysis</span>
+      <span>Additive Manufacturing</span>
+    </div>
+
+  </div>
+
+  <!-- Project 03 -->
+  <div class="project-dossier">
+
+    <div class="project-id">
+      <span class="pid">03</span>
+      <span class="pcontext">Inter IIT Tech Meet 14.0<br>LAT Aerospace</span>
+    </div>
+
+    <div class="project-main">
+      <h3>Powered Lift Wing Design for STOL Aircraft</h3>
+
+      <p class="project-desc">
+        Worked on the aerodynamic design of a powered lift fixed-wing configuration aimed at achieving
+        very high lift coefficients for STOL operations. The project involved integrating thrust-based
+        lift augmentation mechanisms with conventional wing designs.
+      </p>
+
+      <p class="project-desc">
+        Design targets included achieving lift coefficients in the range of 6–8, maintaining L/D
+        greater than 5 with flaps, and operating within a defined thrust-to-weight envelope.
+      </p>
+    </div>
+
+    <div class="project-stack">
+      <span>XFOIL</span>
+      <span>ANSYS</span>
+      <span>Aerodynamics</span>
+      <span>Aircraft Design</span>
+    </div>
+
+  </div>
+
+</section>
+<!-- SKILLS -->
+<section id="skills" class="section skills">
+
+  <h2>Technical Skills</h2>
+
+  <div class="skills-bands">
+
+    <!-- CAx -->
+    <div class="skill-band">
+      <div class="skill-title">
+        CAx Softwares
+      </div>
+      <div class="skill-values">
+        <span>AutoCAD</span>
+        <span>Fusion 360</span>
+        <span>SolidWorks</span>
+        <span>ANSYS</span>
+        <span>nTop Platform</span>
+        <span>MasterCAM</span>
+      </div>
+    </div>
+
+    <!-- Programming -->
+    <div class="skill-band">
+      <div class="skill-title">
+        Programming Languages
+      </div>
+      <div class="skill-values">
+        <span>Python</span>
+        <span>C</span>
+        <span>C++</span>
+        <span>MATLAB</span>
+      </div>
+    </div>
+
+    <!-- Additional -->
+    <div class="skill-band">
+      <div class="skill-title">
+        Additional Skills
+      </div>
+      <div class="skill-values">
+        <span>Automation & Control Systems</span>
+        <span>Robotics</span>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="section achievements-milestones">
+
+  <h2>Achievements</h2>
+
+  <div class="milestone-grid">
+
+    <div class="milestone-item">
+      <span class="milestone-bg">7366</span>
+      <h3>GATE 2025 — All India Rank 7366</h3>
+      <p>
+        Qualified the Graduate Aptitude Test in Engineering (GATE) 2025,
+        achieving an All India Rank of <strong>7366</strong> in a highly
+        competitive national examination.
+      </p>
+    </div>
+
+    <div class="milestone-item">
+      <span class="milestone-bg">TOP 10</span>
+      <h3>Inter IIT Tech Meet 13.0 — Top 10 Finish</h3>
+      <p>
+        Secured <strong>10th position</strong> among <strong>23 IITs</strong>
+        at IIT Bombay in the Quadcopter Control problem, focusing on
+        fault-tolerant control and recovery strategies.
+      </p>
+    </div>
+
+    <div class="milestone-item wide">
+      <span class="milestone-bg">LEAD</span>
+      <h3>Team Lead — Inter IIT Tech Meet 14.0</h3>
+      <p>
+        Led the IIT ISM Dhanbad contingent at IIT Patna for the STOL Aircraft
+        Aerodynamics challenge, overseeing technical strategy, simulations,
+        and coordinated execution across the team.
+      </p>
+    </div>
+
+    <div class="milestone-item wide">
+      <span class="milestone-bg">EV</span>
+      <h3>Technical Member — Team Mechismu Racing</h3>
+      <p>
+        Active technical member of Team Mechismu Racing, the official
+        E-Mobility club of IIT ISM, contributing to the design, analysis,
+        and development of electric vehicle subsystems.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+<!-- CONTACT -->
+<section id="contact" class="section contact-panel">
+
+  <h2 class="contact-heading">Contact</h2>
+
+  <div class="contact-grid">
+
+    <div class="contact-item">
+      <i class="fas fa-phone-alt"></i>
+      <span class="contact-label">Phone</span>
+      <a href="tel:+918500417251">+91 8500417251</a>
+    </div>
+
+    <div class="contact-item">
+      <i class="fas fa-envelope"></i>
+      <span class="contact-label">Email</span>
+      <a href="mailto:gudiwadakartheek@gmail.com">
+        gudiwadakartheek@gmail.com
+      </a>
+    </div>
+
+    <div class="contact-item">
+      <i class="fab fa-linkedin-in"></i>
+      <span class="contact-label">LinkedIn</span>
+      <a href="https://www.linkedin.com/in/gudiwada-kartheek" target="_blank">
+        linkedin.com/in/gudiwada-kartheek
+      </a>
+    </div>
+
+    <div class="contact-item">
+      <i class="fab fa-github"></i>
+      <span class="contact-label">GitHub</span>
+      <a href="https://github.com/GudiwadaKartheek41" target="_blank">
+        github.com/GudiwadaKartheek41
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

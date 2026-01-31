@@ -52,7 +52,7 @@ body {
   margin-top: 40px;
 }
 
-/* MENU ITEMS */
+/* 🔥 ENHANCED MENU ITEM UI */
 .sidebar nav a {
   display: flex;
   align-items: center;
@@ -63,6 +63,7 @@ body {
   border-radius: 10px;
   font-size: 15.5px;
   font-weight: 500;
+  letter-spacing: 0.3px;
   position: relative;
   transition: all 0.25s ease;
 }
@@ -104,8 +105,14 @@ body {
 
 /* SECTIONS */
 .section {
-  min-height: 100vh;     /* ✅ FIX: no forced scroll jump */
+  min-height: 100vh;
   margin-bottom: 80px;
+}
+
+.section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
 /* HOME */
@@ -113,12 +120,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 60px;     /* ✅ FIX: valid padding */
-  padding-left: 20px;   /* ✅ FIX */
+  padding-top: -500px;
+  padding-left: -10px;
   overflow: visible;
 }
 
-/* TEXT */
+.home-image {
+  position: relative;
+}
+
+/* text block */
 .home-text {
   max-width: 600px;
   margin-top: -60px;
@@ -129,6 +140,7 @@ body {
   font-size: 45px;
   margin-bottom: 18px;
   line-height: 1.2;
+  letter-spacing: 0.5px;
 }
 
 .role {
@@ -137,7 +149,7 @@ body {
   margin-bottom: 14px;
 }
 
-/* AFFILIATION */
+/* 🔑 FIX: IIT ISM logo inline with tagline */
 .home-affiliation {
   display: flex;
   align-items: center;
@@ -147,6 +159,8 @@ body {
 
 .home-affiliation img {
   height: 30px;
+  width: auto;
+  flex-shrink: 0;
   filter: brightness(1.5) contrast(1.25);
   opacity: 0.75;
   box-shadow: 0 0 14px rgba(56, 189, 248, 0.45);
@@ -155,23 +169,24 @@ body {
 .tagline {
   color: var(--text-muted);
   max-width: 400px;
+  margin: 0;
   font-size: 15px;
 }
 
 /* IMAGE */
-.home-image {
-  position: relative;
-  margin-right: 0;     /* ✅ FIX: removed negative margin */
-}
-
 .home-image img {
   position: relative;
-  width: 340px;        /* ✅ FIX: safe size */
-  height: 340px;
+  height: 250px;
+  width: 150px;
   border-radius: 18px;
-  top: -20px;          /* subtle lift */
+  right: 0px;
+  top: -50px;
   object-fit: cover;
   box-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
+}
+
+.home-image {
+  margin-right: -300px;
 }
 
 /* PARAGRAPH */
@@ -181,7 +196,7 @@ body {
   color: var(--text-muted);
 }
 
-/* SIDEBAR TOGGLE */
+/* MENU TOGGLE BUTTON */
 .menu-toggle {
   position: fixed;
   top: 20px;
@@ -194,7 +209,7 @@ body {
   z-index: 1000;
 }
 
-/* SIDEBAR STATES */
+/* COLLAPSED SIDEBAR */
 .sidebar.closed {
   left: -240px;
 }
@@ -207,45 +222,4 @@ body {
   margin-left: 0;
 }
 
-/* ===================== */
-/* MOBILE FIX */
-/* ===================== */
-@media (max-width: 768px) {
-
-  .home {
-    flex-direction: column-reverse;
-    padding-top: 20px;
-    padding-left: 0;
-  }
-
-  .home-text {
-    text-align: center;
-    margin-top: 0;
-  }
-
-  .home-image img {
-    width: 260px;
-    height: 260px;
-    top: 0;
-    margin-bottom: 20px;
-  }
-
-  .home-affiliation {
-    justify-content: center;
-  }
-
-  .content {
-    padding: 32px 20px;
-  }
-
-  .section {
-    min-height: auto;
-  }
-}
-
-/* SAFETY */
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-}
 

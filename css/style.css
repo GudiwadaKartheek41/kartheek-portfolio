@@ -181,7 +181,7 @@ body {
 /* IMAGE */
 .home-image img {
   position: relative;   /* 🔑 REQUIRED */
-  height: 300px;        /* ⬅️ increased height */
+  height: 250px;        /* ⬅️ increased height */
   width: 150px;         /* ⬅️ increased width */
   border-radius: 18px;
 
@@ -192,7 +192,7 @@ body {
   box-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
 }
 .home-image {
-  margin-right: -100px;   /* pulls image left safely */
+  margin-right: -300px;   /* pulls image left safely */
 }
 
 /* PARAGRAPH */

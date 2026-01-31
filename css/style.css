@@ -52,7 +52,7 @@ body {
   margin-top: 40px;
 }
 
-/* 🔥 ENHANCED MENU ITEM UI */
+/* MENU ITEMS */
 .sidebar nav a {
   display: flex;
   align-items: center;
@@ -63,7 +63,6 @@ body {
   border-radius: 10px;
   font-size: 15.5px;
   font-weight: 500;
-  letter-spacing: 0.3px;
   position: relative;
   transition: all 0.25s ease;
 }
@@ -105,14 +104,8 @@ body {
 
 /* SECTIONS */
 .section {
-  min-height: 100vh;
+  min-height: 100vh;     /* ✅ FIX: no forced scroll jump */
   margin-bottom: 80px;
-}
-
-.section h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 32px;
-  margin-bottom: 20px;
 }
 
 /* HOME */
@@ -120,16 +113,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: -500px;
-  padding-left: -10px;
+  padding-top: 60px;     /* ✅ FIX: valid padding */
+  padding-left: 20px;   /* ✅ FIX */
   overflow: visible;
 }
-.home-image {
-  position: relative;
-}
 
-
-/* text block */
+/* TEXT */
 .home-text {
   max-width: 600px;
   margin-top: -60px;
@@ -140,7 +129,6 @@ body {
   font-size: 45px;
   margin-bottom: 18px;
   line-height: 1.2;
-  letter-spacing: 0.5px;
 }
 
 .role {
@@ -149,7 +137,7 @@ body {
   margin-bottom: 14px;
 }
 
-/* 🔑 FIX: IIT ISM logo inline with tagline */
+/* AFFILIATION */
 .home-affiliation {
   display: flex;
   align-items: center;
@@ -158,41 +146,32 @@ body {
 }
 
 .home-affiliation img {
-  height: 30px;                 /* balanced size */
-  width: auto;
-  flex-shrink: 0;
-
-  /* 🔑 visibility fix on dark background */
+  height: 30px;
   filter: brightness(1.5) contrast(1.25);
   opacity: 0.75;
-
-  /* subtle accent glow */
   box-shadow: 0 0 14px rgba(56, 189, 248, 0.45);
 }
-
 
 .tagline {
   color: var(--text-muted);
   max-width: 400px;
-  margin: 0;           /* 🔑 prevents vertical shift */
   font-size: 15px;
 }
 
 /* IMAGE */
+.home-image {
+  position: relative;
+  margin-right: 0;     /* ✅ FIX: removed negative margin */
+}
+
 .home-image img {
-  position: relative;   /* 🔑 REQUIRED */
-  height: 250px;        /* ⬅️ increased height */
-  width: 150px;         /* ⬅️ increased width */
+  position: relative;
+  width: 340px;        /* ✅ FIX: safe size */
+  height: 340px;
   border-radius: 18px;
-
-  right: 0px;         /* moves image RIGHT */
-  top: -50px;           /* moves image UP */
-
+  top: -20px;          /* subtle lift */
   object-fit: cover;
   box-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
-}
-.home-image {
-  margin-right: -300px;   /* pulls image left safely */
 }
 
 /* PARAGRAPH */
@@ -202,7 +181,7 @@ body {
   color: var(--text-muted);
 }
 
-/* MENU TOGGLE BUTTON */
+/* SIDEBAR TOGGLE */
 .menu-toggle {
   position: fixed;
   top: 20px;
@@ -215,589 +194,38 @@ body {
   z-index: 1000;
 }
 
-/* COLLAPSED SIDEBAR (FULLY HIDDEN) */
+/* SIDEBAR STATES */
 .sidebar.closed {
   left: -240px;
 }
 
-/* HIDE TEXT WHEN SIDEBAR IS CLOSED */
 .sidebar.closed nav a span {
   display: none;
 }
 
-/* CONTENT SHIFT WHEN SIDEBAR CLOSED */
 .content.shifted {
   margin-left: 0;
 }
 
 /* ===================== */
-/* ABOUT ME PAGE STYLING */
+/* MOBILE FIX */
 /* ===================== */
-
-#about {
-  max-width: 800px;
-  margin: 0 auto;
-  padding-top: 40px;
-}
-
-#about h2 {
-  margin-bottom: 30px;
-}
-
-#about p {
-  margin-top: 22px;
-  font-size: 16.5px;
-  line-height: 1.9;
-  color: var(--text-muted);
-}
-/* ===================== */
-/* EDUCATION SECTION UI */
-/* ===================== */
-
-#education {
-  max-width: 900px;
-  margin: 0 auto;
-  padding-top: 10px;
-   overflow: visible; 
-}
-
-#education h2 {
-  margin-bottom: 40px;
-}
-
-/* Container */
-.education-timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-  position: relative;
-  padding-left: 48px;
-}
-
-/* Vertical accent line */
-.education-timeline::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 8px;
-  bottom: 8px;
-  width: 2px;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(56, 189, 248, 0.7),
-    transparent
-  );
-}
-
-/* Education card */
-.edu-card {
-  background: rgba(17, 24, 39, 0.85);   /* ⬅️ improved contrast */
-  border: 1px solid rgba(255, 255, 255, 0.06); /* ⬅️ subtle separation */
-  padding: 18px 22px;
-  border-radius: 14px;
-  position: relative;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-/* Accent dot */
-.edu-card::before {
-  content: "";
-  position: absolute;
-  left: -53px;
-  top: 28px;
-  width: 12px;
-  height: 12px;
-  background: var(--accent);
-  border-radius: 50%;
-  box-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
-}
-
-/* Hover polish */
-.edu-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
-}
-
-/* Year */
-.edu-year {
-  font-size: 13.5px;
-  color: var(--accent);
-  font-weight: 600;
-  letter-spacing: 0.6px;
-  display: block;
-  margin-bottom: 6px;
-}
-
-/* Institute name */
-.edu-card h3 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 6px;
-  color: var(--text-main);
-}
-
-/* Degree */
-.edu-degree {
-  font-size: 15.5px;
-  color: #cbd5f5;   /* ⬅️ clearer on dark background */
-  margin-bottom: 8px;
-}
-
-/* Score */
-.edu-score {
-  font-size: 15px;
-  color: var(--text-main);
-}
-
-/* ===================== */
-/* EXPERIENCE SECTION */
-/* ===================== */
-
-.experience {
-  position: relative;
-  padding-top: 30px;
-  padding-bottom: 40px;
-  padding-left: 10px;   /* ⬅️ move section left */
-  padding-right: 40px; /* ⬅️ reduced top & bottom spacing */
-  background:
-    linear-gradient(
-      rgba(11, 18, 32, 0.78),  /* ⬅️ lighter overlay to show BG */
-      rgba(11, 18, 32, 0.85)
-    ),
-    url("images/background_img.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* ⬅️ subtle premium feel */
-}
-
-.experience h2 {
-  margin-bottom: 30px; /* ⬅️ reduced gap below heading */
-}
-
-/* Row layout */
-.exp-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* ⬅️ balanced columns */
-  gap: 56px;                      /* ⬅️ reduced horizontal gap */
-  align-items: center;
-  margin-bottom: 20px;            /* ⬅️ reduced space between internships */
-}
-
-/* Reverse row */
-.exp-row.reverse {
-  grid-template-columns: 1fr 1fr;
-}
-
-.exp-row.reverse .exp-content {
-  order: 2;
-}
-
-/* Text content */
-.exp-content {
-  max-width: 560px; /* ⬅️ slightly wider for better reading */
-}
-
-/* Role label */
-.exp-role {
-  display: inline-block;
-  font-size: 12.5px;
-  letter-spacing: 1.2px;
-  color: var(--accent);
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-/* Company / Institute */
-.exp-content h3 {
-  font-size: 26px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-/* Domain line */
-.exp-domain {
-  font-size: 15px;
-  color: #cbd5f5;
-  margin-bottom: 14px;
-}
-
-/* Description */
-.exp-desc {
-  font-size: 16px;
-  line-height: 1.85;
-  color: var(--text-muted);
-  text-align: justify;          /* ⬅️ FIXES uneven paragraph */
-  text-justify: inter-word;
-}
-
-/* Visuals */
-.exp-visual img {
-  width: 100%;
-  max-width: 1000px;        /* ⬅️ increased image size */
-  aspect-ratio: 16 / 9;   /* ⬅️ controls height cleanly */
-  object-fit: cover; 
-  border-radius: 18px;
-  opacity: 0.95;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
-  transition: transform 0.45s ease, opacity 0.45s ease;
-}
-
-.exp-visual img:hover {
-  transform: scale(1.05);
-  opacity: 1;
-}
-body {
-  overflow: hidden;   /* ⬅️ disables mouse/trackpad scroll */
-}
-.section {
-  height: 100vh;          /* lock section to viewport */
-  overflow-y: auto;       /* ⬅️ allow vertical scroll INSIDE */
-  scroll-behavior: smooth;
-  padding-right: 10px;    /* prevents scrollbar overlap */
-}
-.section::-webkit-scrollbar {
-  width: 6px;
-}
-
-.section::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.15);
-  border-radius: 6px;
-}
-
-.section::-webkit-scrollbar-track {
-  background: transparent;
-}
-/* ===================== */
-/* PROJECTS – DOSSIER STYLE */
-/* ===================== */
-
-.projects {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-top: 40px;
-}
-
-/* Project container */
-.project-dossier {
-  display: grid;
-  grid-template-columns: 120px 1fr 220px;
-  gap: 40px;
-  padding: 40px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.project-dossier:last-child {
-  border-bottom: none;
-}
-
-/* Featured project */
-.project-dossier.featured {
-  padding-top: 20px;
-}
-
-/* Left ID column */
-.project-id {
-  text-align: right;
-  padding-top: 6px;
-}
-
-.pid {
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--accent);
-  display: block;
-}
-
-.pcontext {
-  font-size: 12.5px;
-  color: var(--text-muted);
-  margin-top: 6px;
-  line-height: 1.5;
-}
-
-/* Main content */
-.project-main h3 {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 14px;
-}
-
-.project-desc {
-  font-size: 15.5px;
-  line-height: 1.85;
-  color: var(--text-muted);
-  margin-bottom: 14px;
-}
-
-/* Tools / stack */
-.project-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding-top: 6px;
-}
-
-.project-stack span {
-  font-size: 13px;
-  color: #cbd5f5;
-  border-left: 3px solid var(--accent);
-  padding-left: 10px;
-}
-
-/* Link */
-.project-link {
-  display: inline-block;
-  margin-top: 8px;
-  font-size: 14px;
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.project-link:hover {
-  text-decoration: underline;
-}
-/* ===================== */
-/* SKILLS – CAPABILITY BANDS */
-/* ===================== */
-
-.skills {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding-top: 40px;
-}
-
-.skills h2 {
-  margin-bottom: 50px;
-}
-
-/* Wrapper */
-.skills-bands {
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-}
-
-/* Each band */
-.skill-band {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  align-items: center;
-  padding: 26px 30px;
-  border-radius: 18px;
-  background: linear-gradient(
-    120deg,
-    rgba(17, 24, 39, 0.95),
-    rgba(11, 18, 32, 0.95)
-  );
-  border-left: 4px solid var(--accent);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-}
-
-/* Left title */
-.skill-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--text-main);
-  letter-spacing: 0.4px;
-}
-
-/* Right values */
-.skill-values {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px 18px;
-}
-
-/* Skill pill */
-.skill-values span {
-  font-size: 14.5px;
-  padding: 8px 14px;
-  border-radius: 999px;
-  background: rgba(56, 189, 248, 0.12);
-  color: #dbeafe;
-  border: 1px solid rgba(56, 189, 248, 0.25);
-  transition: all 0.25s ease;
-}
-
-/* Hover */
-.skill-values span:hover {
-  background: rgba(56, 189, 248, 0.22);
-  transform: translateY(-2px);
-}
-/* ===================== */
-/* ACHIEVEMENTS – MILESTONE GRID */
-/* ===================== */
-
-.achievements-milestones {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding-top: 40px;
-}
-
-.achievements-milestones h2 {
-  margin-bottom: 48px;
-}
-
-/* Grid layout */
-.milestone-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 46px;
-}
-
-/* Individual milestone */
-.milestone-item {
-  position: relative;
-  padding: 32px 28px;
-  border-left: 3px solid var(--accent);
-}
-
-/* Wider blocks */
-.milestone-item.wide {
-  grid-column: span 2;
-}
-
-/* Background keyword/number */
-.milestone-bg {
-  position: absolute;
-  top: 8px;
-  right: 18px;
-  font-size: 64px;
-  font-weight: 700;
-  color: rgba(56, 189, 248, 0.08);
-  pointer-events: none;
-  user-select: none;
-}
-
-/* Title */
-.milestone-item h3 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: var(--text-main);
-}
-
-/* Description */
-.milestone-item p {
-  font-size: 15.8px;
-  line-height: 1.9;
-  color: var(--text-muted);
-  max-width: 720px;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .milestone-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .milestone-item.wide {
-    grid-column: span 1;
-  }
-}
-/* ===================== */
-/* CONTACT – PROFESSIONAL SIGNAL PANEL */
-/* ===================== */
-
-.contact-panel {
-  padding: 120px 80px 140px;
-}
-
-.contact-heading {
-  font-size: 34px;
-  margin-bottom: 60px;
-}
-
-/* Grid */
-.contact-grid {
-  max-width: 900px;
-  display: flex;
-  flex-direction: column;
-  gap: 34px;
-}
-
-/* Single row */
-.contact-item {
-  display: grid;
-  grid-template-columns: 26px 110px auto;
-  align-items: center;
-  gap: 24px;
-  padding-bottom: 18px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-/* Icon */
-.contact-item i {
-  font-size: 18px;
-  color: var(--accent);
-}
-
-/* Label */
-.contact-label {
-  font-size: 12px;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-
-/* Value */
-.contact-item a {
-  font-size: 18px;
-  color: var(--text-main);
-  text-decoration: none;
-  transition: color 0.25s ease;
-}
-
-.contact-item a:hover {
-  color: var(--accent);
-}
-
-/* Responsive */
 @media (max-width: 768px) {
-  .contact-panel {
-    padding: 80px 40px;
-  }
-
-  .contact-item {
-    grid-template-columns: 22px auto;
-    grid-template-rows: auto auto;
-  }
-
-  .contact-label {
-    grid-column: 2;
-  }
-
-  .contact-item a {
-    grid-column: 2;
-  }
-}
-
-
-
-  /* ===================== */
-/* MOBILE RESET & FIX */
-/* ===================== */
-
-@media (max-width: 768px) {
-
-  /* Reset aggressive desktop shifts */
-  .home-text {
-    left: 0;
-    margin-top: 0;
-    text-align: center;
-  }
 
   .home {
     flex-direction: column-reverse;
-    padding-left: 0;
     padding-top: 20px;
+    padding-left: 0;
+  }
+
+  .home-text {
+    text-align: center;
+    margin-top: 0;
   }
 
   .home-image img {
     width: 260px;
     height: 260px;
-    right: 0;
     top: 0;
     margin-bottom: 20px;
   }
@@ -810,72 +238,14 @@ body {
     padding: 32px 20px;
   }
 
-  /* Stack grids safely */
-  .exp-row,
-  .education-timeline,
-  .projects-layout,
-  .skills-grid {
-    display: block;
-  }
-
-  .exp-row {
-    margin-bottom: 40px;
-  }
-
-  /* Reduce section height pressure */
   .section {
     min-height: auto;
-    margin-bottom: 60px;
-  }
-}
-/* ===================== */
-/* LAPTOP / TABLET FIX */
-/* ===================== */
-
-@media (max-width: 1200px) and (min-width: 769px) {
-
-  /* Content padding balance */
-  .content {
-    padding: 60px 40px;
-  }
-
-  /* HOME section */
-  .home {
-    padding-left: 10px;
-  }
-
-  .home-text {
-    left: 0;              /* remove desktop shift */
-    margin-top: -40px;    /* soften negative spacing */
-  }
-
-  .home-image img {
-    width: 340px;
-    height: 340px;
-    right: -10px;
-    top: -10px;
-  }
-
-  /* Experience images */
-  .exp-visual img {
-    max-width: 420px;
-  }
-
-  /* Reduce gaps between rows */
-  .exp-row {
-    gap: 40px;
-    margin-bottom: 60px;
-  }
-
-  /* Education section */
-  #education {
-    padding-left: 20px;
-    padding-right: 20px;
   }
 }
 
-
+/* SAFETY */
 html, body {
   width: 100%;
   overflow-x: hidden;
 }
+

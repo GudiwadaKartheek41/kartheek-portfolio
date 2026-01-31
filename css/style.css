@@ -120,7 +120,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 50px;
+  padding-top: -500px;
   padding-left: 30px;
   overflow: visible;
 }
@@ -821,6 +821,52 @@ body {
     margin-bottom: 60px;
   }
 }
+/* ===================== */
+/* LAPTOP / TABLET FIX */
+/* ===================== */
+
+@media (max-width: 1200px) and (min-width: 769px) {
+
+  /* Content padding balance */
+  .content {
+    padding: 60px 40px;
+  }
+
+  /* HOME section */
+  .home {
+    padding-left: 10px;
+  }
+
+  .home-text {
+    left: 0;              /* remove desktop shift */
+    margin-top: -40px;    /* soften negative spacing */
+  }
+
+  .home-image img {
+    width: 340px;
+    height: 340px;
+    right: -10px;
+    top: -10px;
+  }
+
+  /* Experience images */
+  .exp-visual img {
+    max-width: 420px;
+  }
+
+  /* Reduce gaps between rows */
+  .exp-row {
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  /* Education section */
+  #education {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 
 html, body {
   width: 100%;

@@ -185,7 +185,7 @@ body {
   width: 150px;         /* ⬅️ increased width */
   border-radius: 18px;
 
-  right: -90px;         /* moves image RIGHT */
+  right: 90px;         /* moves image RIGHT */
   top: -50px;           /* moves image UP */
 
   object-fit: cover;

@@ -181,8 +181,8 @@ body {
 /* IMAGE */
 .home-image img {
   position: relative;   /* 🔑 REQUIRED */
-  height: 360px;        /* ⬅️ increased height */
-  width: 200px;         /* ⬅️ increased width */
+  height: 300px;        /* ⬅️ increased height */
+  width: 150px;         /* ⬅️ increased width */
   border-radius: 18px;
 
   right: -90px;         /* moves image RIGHT */

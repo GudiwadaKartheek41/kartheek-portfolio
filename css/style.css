@@ -194,9 +194,6 @@ body {
 .home-image {
   margin-right: -350px;   /* pulls image left safely */
 }
-.home {
-  overflow-x: hidden;   /* prevents horizontal cut issues */
-}
 
 /* PARAGRAPH */
 .section p {

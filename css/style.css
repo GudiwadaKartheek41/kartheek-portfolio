@@ -180,11 +180,15 @@ body {
 
 /* IMAGE */
 .home-image img {
-  height: 300px;
-  width: 300px;
+  position: relative;   /* 🔑 REQUIRED */
+  height: 360px;        /* ⬅️ increased height */
+  width: 360px;         /* ⬅️ increased width */
   border-radius: 18px;
- right: -50px;   /* ⬅️ moves image to the RIGHT */
-  top: -50px;  
+
+  right: -50px;         /* moves image RIGHT */
+  top: -50px;           /* moves image UP */
+
+  object-fit: cover;
   box-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
 }
 

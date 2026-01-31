@@ -185,11 +185,14 @@ body {
   width: 150px;         /* ⬅️ increased width */
   border-radius: 18px;
 
-  right: 90px;         /* moves image RIGHT */
+  right: 0px;         /* moves image RIGHT */
   top: -50px;           /* moves image UP */
 
   object-fit: cover;
   box-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
+}
+.home-image {
+  margin-right: -20px;   /* pulls image left safely */
 }
 
 /* PARAGRAPH */

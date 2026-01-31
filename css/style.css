@@ -192,7 +192,10 @@ body {
   box-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
 }
 .home-image {
-  margin-right: -300px;   /* pulls image left safely */
+  margin-right: -350px;   /* pulls image left safely */
+}
+.home {
+  overflow-x: hidden;   /* prevents horizontal cut issues */
 }
 
 /* PARAGRAPH */

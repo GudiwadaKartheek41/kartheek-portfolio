@@ -182,7 +182,7 @@ body {
 .home-image img {
   position: relative;   /* 🔑 REQUIRED */
   height: 360px;        /* ⬅️ increased height */
-  width: 360px;         /* ⬅️ increased width */
+  width: 200px;         /* ⬅️ increased width */
   border-radius: 18px;
 
   right: -90px;         /* moves image RIGHT */
